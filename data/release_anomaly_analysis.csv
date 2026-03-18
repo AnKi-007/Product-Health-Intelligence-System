@@ -1,0 +1,8 @@
+version,ticket_change_pct,avg_rating_after,reviews_after_count,release_health_score,anomaly_score,anomaly_rank,is_anomaly,low_rating_flag,ticket_spike_flag,low_health_flag,business_risk,risk_level
+2025.4,8.27,4.0,217,0.4212166398968441,0.057598622368334296,7.0,No,False,False,False,0,Low
+2025.7,6.99,4.05,195,0.4073263764669454,0.01875635752375432,4.0,No,False,False,False,0,Low
+2025.3,0.25,3.89,209,0.3731955128552062,0.01301888217876157,3.0,No,True,False,False,1,Medium
+2025.2,13.6,4.0,224,0.3464279573590098,0.023599152271546187,5.0,No,False,True,False,1,Medium
+2025.5,14.79,3.99,207,0.2187925749253555,0.030038463795202752,6.0,No,True,True,False,2,High
+2025.6,7.67,3.83,199,0.0720362440412001,0.010920563109870052,2.0,No,True,False,False,1,Medium
+2025.1,4.02,3.73,187,-0.0777854195323246,-0.09828506798883035,1.0,Yes,True,False,True,2,High
