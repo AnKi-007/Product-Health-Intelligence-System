@@ -1,67 +1,84 @@
-Monthly Product Health Intelligence System
+# Monthly Product Health Intelligence System
 
-Overview
-The Monthly Product Health Intelligence System is an end-to-end internal analytics pipeline designed to monitor product health across releases using real and simulated data, machine learning, and LLM-based explanations.
+An end-to-end product analytics system designed to evaluate release health, detect anomalies, and provide actionable insights using data engineering, machine learning, and business intelligence.
 
-This project mirrors how product analytics and data science teams operate inside SaaS companies, focusing on data pipelines, analytics logic, anomaly detection, and explainability.
+## Problem Statement
 
-Problem Statement
-Product teams need to understand:
-- Whether a release negatively impacted users
-- Whether support tickets increased after a release
-- Whether review ratings declined
-- Which releases are risky and require investigation
-- How insights can be communicated clearly to stakeholders
+Product releases often impact customer experience, support load, and overall system stability. This project analyzes multiple product signals to identify risky releases and monitor product health over time.
 
-System Architecture
+## Tech Stack
 
-Data Sources
-    |
-    v
-Ingestion Layer (Python)
-    |
-    v
-MongoDB (product_analytics)
-    |
-    v
-ETL & Feature Engineering
-    |
-    v
-Analytics & Health Scoring
-    |
-    v
-ML Anomaly Detection (Isolation Forest)
-    |
-    v
-LLM Insight Generation
-    |
-    v
-Monthly Product Health Report
+* Python (Pandas, NumPy)
+* Machine Learning (Isolation Forest)
+* MongoDB (NoSQL Database)
+* Power BI (Dashboard & Visualization)
+* LLM-based Insights (AI explanations)
 
-Project Structure
-- ingestion: Load raw data into MongoDB
-- scraping: External data collection and simulation
-- etl: Data cleaning and normalization
-- analysis: Analytics, scoring, and ML
-- llm: LLM-based explanations
-- data: Intermediate and final datasets
-- reports: Final stakeholder outputs
+## Key Features
 
-Analytics and Modeling
-Release Impact Analysis compares metrics before and after releases.
-Health Scores are rule-based for transparency.
-Correlation Analysis uses simulated data when real coverage is limited.
-Anomaly Detection uses Isolation Forest.
-LLM generates human-readable explanations only.
+* Product health score calculation based on multiple metrics
+* Anomaly detection using Isolation Forest
+* Risk classification (Low, Medium, High)
+* Correlation analysis using simulated data
+* AI-based anomaly explanations
+* Interactive Power BI dashboard for business insights
 
-How to Run
-python analysis/monthly_product_health_intelligence.py
+## Pipeline Flow
 
-Outputs
-- release_health_scores.csv
-- release_anomaly_analysis.csv
-- release_anomaly_llm_insights.csv
-- monthly_product_health_report.md
+1. Data Ingestion (product releases, reviews, support tickets, usage data)
+2. Data Cleaning and Feature Engineering
+3. Product Health Score Calculation
+4. Anomaly Detection using Machine Learning
+5. AI-based Insight Generation (LLM)
+6. Dashboard Visualization using Power BI
 
-Summary
-Built an internal monthly product analytics pipeline that ingests multiple data sources, stores them in MongoDB, performs ETL, analyzes release impact, detects anomalies using ML, and explains insights using LLMs.
+## Datasets Used
+
+* Product release data
+* Customer review data
+* Support ticket data
+* Product usage metrics
+* Simulated data for correlation analysis
+
+
+## Dashboard
+
+Power BI dashboard for product health and anomaly analysis.
+
+<img width="1306" height="737" alt="image" src="https://github.com/user-attachments/assets/2cd50dcd-5c72-4cf7-8740-4c30492914e0" />
+
+
+
+## Project Structure
+
+analysis/ → Core analytics and ML logic
+ingestion/ → Data loading and preprocessing scripts
+llm/ → AI-based anomaly explanation generation
+reports/ → Generated reports and insights
+
+## Sample Insights
+
+* Identification of high-risk releases based on ticket spikes and rating drops
+* Detection of anomalous releases using Isolation Forest
+* Clear visualization of product health trends over time
+
+## Key Learnings
+
+* Built an end-to-end data pipeline
+* Applied machine learning for anomaly detection
+* Integrated structured and unstructured data
+* Developed business-ready dashboards for decision-making
+
+
+## Outcome
+
+Enabled early detection of risky product releases and supported data-driven decision-making for product and engineering teams.
+
+## Future Improvements
+
+* Real-time data pipeline integration
+* Advanced anomaly detection models
+* Automated alert system for high-risk releases
+* Deployment using cloud platforms
+
+Project created & developed by:- Anand Kishore
